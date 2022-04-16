@@ -10,14 +10,14 @@
             <div class="col-md-8">
               <!-- Name input -->
               <div class="form-outline">
-                <textarea class="form-control" id="textAreaExample" rows="1" name="text" required></textarea>
+                <textarea class="form-control" id="textAreaExample" rows="1" name="text"  pattern="[^' ']+" required></textarea>
                 <label class="form-label" for="textAreaExample" name="text">Message</label>
               </div>
             </div>
             <div class="col">
               <!-- Email input -->
               <div class="form-outline">
-                <input type="text" id="form8Example2" class="form-control" name="passKey" />
+                <input type="text" id="form8Example2" class="form-control" name="passKey" pattern="[^' ']+" required/>
                 <label class="form-label" for="form8Example2" name="passKey">Secret Key</label>
               </div>
             </div>
@@ -52,7 +52,7 @@
                 <div class="col-md name d-flex flex-column justify-content-center align-items-center key">
                   <form class="row" action="/decrypt/message/<%=item._id%>" method="post">
                     <div class="col form-outline">
-                      <input type="text" id="pass<%=index%>" class="form-control" name="passKey"/>
+                      <input type="text" id="pass<%=index%>" class="form-control" name="passKey" pattern="[^' ']+" required/>
                       <label class="form-label" for="pass<%=index%>">Secret Key</label>
                     </div>
                     <div class="col"><button 
